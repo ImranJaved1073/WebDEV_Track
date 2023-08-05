@@ -21,7 +21,8 @@ function clearAll()
  * - Show a random Meme in the correct location
  * - Never show more than 1 meme at a time
  */
-function showMeme() {
+function showMeme() 
+{
   // Value is a string representing image URL
   const randomMemeUrl = getRandomData("memes");
 
@@ -41,13 +42,14 @@ function showMeme() {
  * - Show a random joke in the correct location
  * - Never show more than 1 joke at a time
  */
-function showJoke() {
+function showJoke() 
+{
   // Value is a string representing the joke
   const randomJokeText = getRandomData("jokes");
 
   const jokeContainer = document.querySelector(".joke-content");
   const newJoke = document.createElement("p");
-  newJoke.textContent=randomJokeText;
+  newJoke.textContent = randomJokeText;
 
   clearAll();
 
@@ -114,13 +116,13 @@ function revealAnswers()
   const riddle = riddleContent.querySelector("p");
   const riddleAnswer = document.querySelector("#riddle-answer");
 
-  if (riddle && riddleAnswer.hidden) {
+  if (riddle && riddleAnswer.hidden)
     riddleAnswer.hidden = false;
-  } else if (riddle && riddleAnswer) {
-    alert("The riddle answer is already exposed!");
-  } else {
-    alert("There is no riddle to show the answer for!");
-  }
+  else if (riddle && riddleAnswer)
+    alert("The riddle answer is already being revealed!");
+  else
+    alert("There is no riddle there to show the answer!");
+
 }
 
 /**
@@ -171,6 +173,16 @@ const memes = [
   "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Error-in-Code-896x1024.jpg",
   "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Meme-Code-Comments-be-Like-925x1024.jpg",
   "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Internet-Explorer-Joke-915x1024.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-Artificial-Intelligence-768x616.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-Bugs-Errors-Lines-of-Code-768x921.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-HTML-Meme-768x748.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-Network-Specialist-768x755.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-Programmer-Life-768x716.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Jokes-Studying-Software-Engineering-850x1024.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Memes-End-Game-300x245.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coding-Memes-Normal-Brain-vs-Programmer-Brain-300x212.jpg",
+  "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Coronavirus-vs-Programmer-1024x869.jpg",
+
 ];
 
 // Sourced from: http://www.devtopics.com/best-programming-jokes/

@@ -8,7 +8,7 @@ Just write your HTML however you want and these will automatically work.
 
 body {
   background-color: #1d2326;
-  color: #bfa38a;
+  color: #1fc2a7;
   font-family: monospace;
 }
 
@@ -33,7 +33,7 @@ p {
   right: 20px;
   bottom: 20px;
   font-size: 0.8rem;
-  background-color: #8097a6;
+  background-color: #1fc2a7;
   padding: 10px;
   border-radius: 5px;
   color: #1d2326;
@@ -74,10 +74,10 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 35px;
-  border: 3px solid rgb(238, 228, 228);
+  border: 4px solid rgb(157, 250, 50);
   background: transparent;
   color: hsl(0, 33%, 1%);
-  background-color: #0affb5;
+  background-color: #c9ab05;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -85,6 +85,7 @@ button {
 button:hover {
   cursor: pointer;
   background-color: rgb(238, 228, 228);
+  color: #e26b26;
 }
 
 .clear-btn {
