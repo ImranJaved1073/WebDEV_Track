@@ -47,13 +47,12 @@ function showJoke()
   // Value is a string representing the joke
   const randomJokeText = getRandomData("jokes");
 
-  const jokeContainer = document.querySelector(".joke-content");
   const newJoke = document.createElement("p");
   newJoke.textContent = randomJokeText;
 
   clearAll();
 
-  jokeContainer.appendChild(newJoke);
+  document.querySelector(".joke-content").appendChild(newJoke);
 }
 
 /**
@@ -95,7 +94,7 @@ function showRiddle()
   newRiddleQuestion.textContent = randomRiddle.question;
   newRiddleAnswer.textContent = "- " + randomRiddle.answer;
   newRiddleAnswer.setAttribute("id", "riddle-answer");
-
+  
   clearAll();
 
   newRiddleAnswer.hidden = true;
@@ -149,7 +148,7 @@ function revealAnswers()
  * Example usage: getRandomData('quotes');
  */
 function getRandomData(type) {
-  return data[type][rn(data[type].length)];
+  return data[type][randomNo(data[type].length)];
 }
 
 // ----------------------------------------------------
@@ -297,7 +296,7 @@ const riddles = [
 ];
 
 // Just a little helper function
-function rn(len) {
+function randomNo(len) {
   return Math.floor(Math.random() * len);
 }
 
